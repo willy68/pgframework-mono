@@ -46,7 +46,5 @@ database.php
 /generated_models
 /generated_routes
 /generated_controllers
-/package/*
 routes.xml
 tmp
-/bin/*
