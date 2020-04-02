@@ -50,3 +50,5 @@ database.php
 /package/pgframework
 routes.xml
 tmp
+bin/*
+!bin/.gitkeep
