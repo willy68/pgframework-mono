@@ -46,9 +46,7 @@ database.php
 /generated_models
 /generated_routes
 /generated_controllers
-/package/pgconsole
-/package/pgframework
+package/*
 routes.xml
 tmp
 bin/*
-!bin/.gitkeep
