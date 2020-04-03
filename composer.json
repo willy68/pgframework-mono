@@ -7,34 +7,34 @@
             "email": "william.lety@gmail.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "git",
-            "url": "package/pgframework"
-        },
-        {
-            "type": "git",
-            "url": "package/pgconsole"
-        }
-    ],
     "require": {
+        "guzzlehttp/psr7": "^1.6",
         "http-interop/response-sender": "^1.0",
-        "willy68/pgframework": "dev-master",
+        "php-di/php-di": "^6.0",
+        "twig/twig": "^3.0",
+        "mezzio/mezzio-fastroute": "^3.0",
+        "tuupola/http-factory": "^1.1",
+        "pagerfanta/pagerfanta": "^2.1",
+        "grafikart/psr15-csrf-middleware": "^1.0",
+        "intervention/image": "^2.5",
+        "doctrine/annotations": "^1.8",
+        "dflydev/fig-cookies": "^2.0",
+        "tuupola/slim-jwt-auth": "^3.4",
+        "willy68/php-activerecord-dev": "^1.2",
         "ext-json": "*",
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+        "symfony/dotenv": "^5.0"
     },
     "autoload": {
         "psr-4": {
+            "Framework\\": "package/pgframework/src/Framework",
             "App\\": "app"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Application\\Console\\": "bin/src"
+            "Application\\Console\\": "package/pgconsole/src"
         }
-    },
-    "config": {
-        "bin-dir": "bin"
     },
     "require-dev": {
         "middlewares/whoops": "^2.0",
@@ -46,9 +46,8 @@
         "symfony/console": "^5.0",
         "willy68/pgconsole": "dev-master"
     },
-    "scripts": {
-        "pre-update-cmd": [
-            "@php ComposerEvent.php"
-        ]
-    }
+    "config": {
+        "bin-dir": "bin"
+    },
+    "bin": ["package/pgconsole/bin/generate"]
 }
