@@ -43,11 +43,13 @@
         "robmorgan/phinx": "^0.11.4",
         "fzaninotto/faker": "^1.9",
         "odan/phinx-migrations-generator": "^4.6",
-        "symfony/console": "^5.0",
-        "willy68/pgconsole": "dev-master"
+        "symfony/console": "^5.0"
     },
     "config": {
         "bin-dir": "bin"
     },
-    "bin": ["package/pgconsole/bin/generate"]
+    "bin": ["package/pgconsole/bin/generate"],
+    "scripts": {
+        "post-update-cmd": ["ln -s ../package/pgconsole/bin/generate  ./bin/generate"]
+    }
 }
