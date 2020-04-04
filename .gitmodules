@@ -1,0 +1,8 @@
+[submodule "package/pgframework"]
+	path = package/pgframework
+	url = https://github.com/willy68/pgframework.git
+	branch = master
+[submodule "package/pgconsole"]
+	path = package/pgconsole
+	url = https://github.com/willy68/pgconsole.git
+	branch = master
