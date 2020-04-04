@@ -14,6 +14,8 @@ git commit -am "Ajout des sous modules pgconsole et pgframework"
 ## Git clone pgframework-mono
 git clone --recurse-submodules https://github.com/willy68/pgframework-mono.git
 
+git submodule foreach 'git checkout master'
+
 ## Mise à jour des sous modules
 git submodule update --remote --rebase
 
